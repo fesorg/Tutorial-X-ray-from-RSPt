@@ -6,8 +6,8 @@ This can cause certain issues in the spectra for example an underprediction of t
 
 
 ## Running a spin averaged DFT calculation
-If you want to run a spin averaged DFT calculation, where you later on introduce the spin using tensormoments, you have to specify spinpol in the symt.inp file and you cannot specify up or dn in the atom block.
-Instead use a and b to preserve the symmetry of the magnetic state.
+If you want to run a spin averaged DFT calculation, where you later on introduce the spin using tensormoments, you have to specify `spinpol` in the `symt.inp` file and you cannot specify `up` or `dn` in the `atom` block.
+Instead use `a` and `b` to preserve the symmetry of the magnetic state.
 ````
 atoms
  4
@@ -17,7 +17,7 @@ atoms
   0.50  0.50  0.75    8  l    a
 
 ````
-Next, to make sure that RSPt does not give these atoms a spin due to being lower in energy we average the two spin channels. This can be done by setting prn flag 11 in dta/prnt_array (before you make data) or in the data file from false
+Next, to make sure that RSPt does not give these atoms a spin due to being lower in energy we average the two spin channels. This can be done by setting `prnt flag 11` in `dta/prnt_array` (before you make data) or in the `data` file from false
 ````
     .    1    .    2    .    3    .    4    .    5    .    6    .    7
 fftffffftffffffffffftftfffffffftfffftffffffftffffffffffffffftfffffttffff
@@ -28,7 +28,7 @@ to true
 fftffffftftffffffffftftfffffffftfffftffffffftffffffffffffffftfffffttffff
 ````
 ## Breaking the symmetry
-After running a few DFT calculations, we can introduce the spin in the form of the self-energy. This can be done by specifying the tensmom Symbrk keyword and the flag 0 1 1 1, which corresponds to applying a tensormoment on the spin.
+After running a few DFT calculations, we can introduce the spin in the form of the self-energy. This can be done by specifying the `tensmom` `Symbrk` keyword and the flag `0 1 1 1`, which corresponds to applying a tensormoment on the spin.
 Then specify a magnitude at the end of the solver line of your cluster block. Here, positive numbers correspond to spin up and negative numbers to spin dn. The green.inp file to do this for NiO should look like this: 
 ````
 ! do not read any self-energy (if present)
@@ -60,7 +60,7 @@ cluster
 You run only a single iteration with this `green.inp` file. After that you can run the calculation with your regular `green.inp` file until it is converged. 
 Note, the spin will only show up in the Occupation part of the out file and nowhere else. If you have fullrel on you might see a small magnetic moment, which is the orbital moment.
 ## Getting the Hybridization function
-Once your calculation is converged, you can extract the hybridization function from RSPt to do this simply specify the spectrum keyword Hyb, the verbose keyword Dump and the debug keyword Dump. 
+Once your calculation is converged, you can extract the hybridization function from RSPt to do this simply specify the `spectrum` keyword `Hyb`, the `verbose` keyword `Dump` and the `debug` keyword `Dump`. 
 ````
 debug
 Dump
@@ -74,7 +74,7 @@ Dos Pdos Hyb
 
 ````
 Setting Hyb alone will ignore the offdiagonal elements in the hybridization function, which can contribute to the groundstate of the Hamiltonian and therefore to the shape of your spectra.
-NiO is a cubic system and therefore, its natural basis is composed of $`e_g`$ and $`t_{2g}`$ orbitals. Therefore, it is recommended to use basis set 3. You can do this in the cluster you use to apply the Hubbard $U$ or in an observer cluster.
+NiO is a cubic system and therefore, its natural basis is composed of $`e_g`$ and $`t_{2g}`$ orbitals. Therefore, it is recommended to use basis set `3`. You can do this in the cluster you use to apply the Hubbard $U$ or in an observer cluster.
 ````
 cluster
 1 
