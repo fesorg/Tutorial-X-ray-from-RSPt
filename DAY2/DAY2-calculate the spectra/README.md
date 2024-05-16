@@ -40,23 +40,23 @@ mpprun python -m impurityModel.ed.get_spectra $h0_filename $radial_filename --Fd
 ````
 Now, let us go through every part that is set here.  
 -`n0imp` (integer): The nominal occupation of the orbital you wish to excite into.  
-\textbf{doccs} (float): Occupation of the said Orbital for double counting (Nominal works well, but sometimes it is worth trying the occupation RSPt gives you).  
-\textbf{nBath3d} (integer): Total number of bath states for the Orbitals you want to excite into. finiteH0.py prints it at the end of the run.  
-\textbf{nBath3dval} (integer): Number of valence bath states for the Orbitals you want to excite into.  
-\textbf{ct} (float): Double counting correction, physically corresponds to  
-\textbf{delta} (float): lorentizian broadening of the entire spectrum due to lifetime effects  
-\textbf{delta\_2} (float): additional broadening of the $L_2$-edge due to the super Coster-Kronig effect.  
-\textbf{POS} (float): Energy after which the extra broadening is applied aim to have it in a region were the intensity between the $L_3$ and $L_2$ edge is zero or at least small.  
-\textbf{deltaRIXS}(float): broadening for the energyloss part in RIXS, negative values make the program skip the calculation of the RIXS spectrum.   
-\textbf{deltaNIXS}(float): broadening for the energyloss part in NIXS, negative values make the program skip the calculation of the NIXS spectrum.   
-\textbf{Fdd} {tuple}: $F_{dd}^k$ Slater parameters from RSPt in order of $k$. Note that $F_{dd}^k$ is 0 when k is odd.  
-\textbf{Fpd} {tuple}: $F_{pd}^k$ Slater parameters from RSPt in order of $k$. Note that $F_{pd}^k$ is 0 when k is odd.   
-\textbf{Gdd} {tuple}: $G_{pd}^k$ Slater parameters from RSPt in order of $k$. Note that $G_{pd}^k$ is 0 when k is even.  
-\textbf{xi\_2p} (float): 2$p$ spin-orbit coupling in eV. You can calculate it from the energy difference of the core states in out. The difference is then multiplied by $\frac{2}{3}$.  
-\textbf{xi\_3d} (float): 3$d$ spin-orbit coupling in eV.  
-\textbf{VP} (float): shift of the 2$p$ energy level in eV. Only important if you have multiple different sides contributing to the same absorption edges. The energy differences between the core states in RSPt give a good indication of this value.  
-\textbf{dnConBaths} (Tuple): number of states to consider in the conduction band. Put the second number to 1 or 2 if you include bath states in the conduction band. Otherwise both should be 0.  
-\textbf{nPsiMax} (integer): number of wavefunctions to calculate to determine the thermal ground state. It should be larger than the number of bath states considered for making the spectra in impurity.log. As you do not know if you used enough otherwise.  
+-`doccs` (float): Occupation of the said Orbital for double counting (Nominal works well, but sometimes it is worth trying the occupation RSPt gives you).  
+-`nBath3d` (integer): Total number of bath states for the Orbitals you want to excite into. finiteH0.py prints it at the end of the run.  
+-`nBath3dval` (integer): Number of valence bath states for the Orbitals you want to excite into.  
+-`ct` (float): Double counting correction, physically corresponds to  
+-`delta` (float): lorentizian broadening of the entire spectrum due to lifetime effects  
+-`delta_2` (float): additional broadening of the $L_2$-edge due to the super Coster-Kronig effect.  
+-`POS` (float): Energy after which the extra broadening is applied aim to have it in a region were the intensity between the $L_3$ and $L_2$ edge is zero or at least small.  
+-`deltaRIXS`(float): broadening for the energyloss part in RIXS, negative values make the program skip the calculation of the RIXS spectrum.   
+-`deltaNIXS`(float): broadening for the energyloss part in NIXS, negative values make the program skip the calculation of the NIXS spectrum.   
+-`Fdd` (tuple): $`F_{dd}^k$` Slater parameters from RSPt in order of $k$. Note that $`F_{dd}^k`$ is 0 when k is odd.  
+`Fpd` (tuple): $`F_{pd}^k$` Slater parameters from RSPt in order of $k$. Note that $`F_{pd}^k`$ is 0 when k is odd.   
+-`Gdd` (tuple): $`G_{pd}^k$` Slater parameters from RSPt in order of $k$. Note that $`G_{pd}^k`$ is 0 when k is even.  
+-`xi_2p` (float): 2 $p$ spin-orbit coupling in eV. You can calculate it from the energy difference of the core states in out. The difference is then multiplied by $`-\frac{2}{3}`$.  
+-`xi_3d` (float): 3 $d$ spin-orbit coupling in eV.  
+-`VP` (float): shift of the 2 $p$ energy level in eV. Only important if you have multiple different sides contributing to the same absorption edges. The energy differences between the core states in RSPt give a good indication of this value.  
+-`dnConBaths` (Tuple): number of states to consider in the conduction band. Put the second number to 1 or 2 if you include bath states in the conduction band. Otherwise both should be 0.  
+-`nPsiMax` (integer): number of wavefunctions to calculate to determine the thermal ground state. It should be larger than the number of bath states considered for making the spectra in impurity.log. As you do not know if you used enough otherwise.  
 Now that we have to set the parameters according to the Slaterparameters we determined on the first day. We can simply run the script using
 ````
 sbatch script_Xbath.sh
