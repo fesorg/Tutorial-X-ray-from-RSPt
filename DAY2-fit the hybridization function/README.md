@@ -79,8 +79,9 @@ Now let us get into the actual fitting procedure. So run
 ```
 again. It should skip to a window with an orange and a blue line. If you did not set `verbose_fig=False` just close the windows until you arrive at the first one that matches this description.
 This is the real part of the hybridization function of the first block we set so for orbital 0. As the imaginary part is more interesting for us, we can also close that. 
-A similar window should open, which should look like
-![Hybfit1](Hybfit1.png "Imaginary part of the hybridization function of orbital 0")
+A similar window should open, which should look like 
+![Hybfit1](Hybfit1.png "Imaginary part of the hybridization function of orbital 0")  
+
 Here, we can see that there is one peak in the original Hybridization function. Move your pointer to the peak and you can see the exact position written in the top right corner. Write down the x value, this is what we want to use as the centre 
 of our bath state to fit the hybridization function. Now, you can close the window and the following until you arrive at the next window with these two lines and imag part written on top. Again look for the biggest peak write down the x value
 and close the window. Repeat until for all of the 10 orbitals. Your 10 x values should be approximately:  
