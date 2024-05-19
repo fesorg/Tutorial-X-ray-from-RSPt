@@ -22,10 +22,10 @@ Next, to make sure that RSPt does not give these atoms a spin due to being lower
     .    1    .    2    .    3    .    4    .    5    .    6    .    7
 fftffffftffffffffffftftfffffffftfffftffffffftffffffffffffffftfffffttffff
 ````
-to true
+to true (For it to be applied in a pure DFT calculation you also need to set prnt flag 7 to TRUE)
 ````
     .    1    .    2    .    3    .    4    .    5    .    6    .    7
-fftffffftftffffffffftftfffffffftfffftffffffftffffffffffffffftfffffttffff
+fftffftftftffffffffftftfffffffftfffftffffffftffffffffffffffftfffffttffff
 ````
 ## Breaking the symmetry
 After running a few DFT calculations, we can introduce the spin in the form of the self-energy. This can be done by specifying the `tensmom` `Symbrk` keyword and the flag `0 1 1 1`, which corresponds to applying a tensormoment on the spin.
