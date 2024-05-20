@@ -92,10 +92,10 @@ and close the window. Repeat until for all of the 10 orbitals. Your 10 x values 
 We can see that the hybridization function is functionally identical for the two $`e_g`$ and three $`t_{2g}`$ orbitals. This does not always have to be the case, which is why it is advised to write down all 10 x values.
 Now, let us fit these peaks using bath states for this we want to go into `rspt2spectra_parameters.py` again and edit the `wborders` to
 ````
-wborders = np.array([[-2.59, -2.19],
-[-5.47, -5.07],
-[-3.85, -3.45],
-[-5.4, -5.0],
+wborders = np.array([[-1.22, -0.82],
+[-3.89, -3.49],
+[-2.35, -1.95],
+[-3.8, -3.4],
 [-2.3, -1.9]], dtype=np.float)
 ````
 Note that the first lists contain two numbers. The first number is 0.2 eV lower and the second number is 0.2 eV higher than the x values we wrote down. The last border is unrelated to our fit and just a remnant of a previous fit.
@@ -124,13 +124,13 @@ First, we again need to run `finiteH0.py` and find the x values of peaks we want
 Also the $`e_g`$ spin up channel showed a double peak, so it might be good to include two bath states in the same borders and make them wider instead so that the borders don't overlap.
 Using the new borders for the bath states it should look like
 ````
-wborders = np.array([[-2.59, -2.19],
-[-3.84,-3.44],
-[-5.47, -5.07],
-[-3.37,-2.97],
-[-4.04, -3.24],
-[-5.4, -5.0],
-[-3.35, -2.95]], dtype=np.float)
+wborders = np.array([[-1.22, -0.82],
+[-2.46, -2.06],
+[-3.89, -3.49],
+[-1.81,-1.41],
+[-2.6, -1.85],
+[-3.8, -3.4],
+[-1.76, -1.36]], dtype=np.float)
 
 ````
 Given that we had to add two new lists we also have to increase the number of elements per list in `n_bath_sets_foreach_block_and_window` by two. Furthermore, now that we are using two bath states per orbital we also need to switch them on.
