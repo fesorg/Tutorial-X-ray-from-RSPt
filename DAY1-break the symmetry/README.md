@@ -47,13 +47,13 @@ Spin_avg_dc
 
 cluster
 1 eV UJ
-1 2 1 1 0  7.2 0.9 Ewin -1.2 0.7
+1 2 1 1 0  7.2 0.9 Ewin -0.7 0.5
 2  2  0.9 1.0
 !          ^ this is a symmetry breaking magnitude. Positive sign is going to make spin moment pointing "up"
 
 cluster
 1 eV UJ
-2 2 1 1 0  7.2 0.9 Ewin -1.2 0.7
+2 2 1 1 0  7.2 0.9 Ewin -0.7 0.5
 2  2  0.9 -1.0
 !          ^ this is going to make spin  moment pointing "dn"
 ````
@@ -78,11 +78,11 @@ NiO is a cubic system and therefore, its natural basis is composed of $`e_g`$ an
 ````
 cluster
 1 
-1 2 1 1 3 Ewin -1.2 0.7
+1 2 1 1 3 Ewin -0.7 0.5
 
 cluster
 1 eV UJ
-1 2 1 1 0  8.0 0.9 Ewin -1.2 0.7
+1 2 1 1 0  8.0 0.9 Ewin -0.7 0.5
 2  2  0.9
 
 ````
@@ -93,7 +93,7 @@ To do this rewrite your observer cluster to:
 ````
 cluster
 1 
-1 2 1 1 3 Ewin -1.2 0.7 Euler 0 0 0 1
+1 2 1 1 3 Ewin -0.7 0.5 Euler 0 0 0 1
 ````
 For the sake of practice, we want you to fit both hybridization functions and obtain similar results. To do this either run both calculations in separate folders or give the clusters a name using the Id keyword. 
 For example Euler and Bare:
