@@ -167,7 +167,7 @@ Now, let us take a look at the actual values, which are written in columns 5 to 
 8.4720677 3.9920178 0.0000000 0.0000000
 ````
 Here, the first column indicates the $`F^0`$ and $`G^1$` moments, the second row $`F^2`$ and $`G^3$` moments and the third  $`F^4`$ and $`G^5$`. The elements of $`F^k`$ with an odd value of $k$ and the elements of $`G^k`$ with an odd value of $k$
-are skipped as they have to be 0. We can also see that $`F_{dd}^6$,  $`F_{pd}^4$ and  $`G_{pd}^5$ are zero. This is due to the fact that the $k$'s moment of $U$ for $`k > 2 \times \mathrm{min}(l,l')`$ is always 0.
+are skipped as they have to be 0. We can also see that $`F_{dd}^6$,  $`F_{pd}^4$ and  $`G_{pd}^5`$ are zero. This is due to the fact that the $k$'s moment of $U$ for $`k > 2 \times \mathrm{min}(l,l')`$ is always 0.
 Now, let us extract the Slater parameters, convert them to eV and screen them to 80%. This should give us:
 -$`F_{dd}^0`$= 21.18  
 -$`F_{dd}^2`$= 9.72  
