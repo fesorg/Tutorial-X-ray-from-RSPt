@@ -13,7 +13,7 @@ doccs=8
 nBath3d=20
 # Number of valence bath states coupled to 3d-orbitals.
 nBath3dval=20
-ct=1.50
+ct=2.50
 delta=0.4
 delta_2=0.1
 POS=5.5
