@@ -29,7 +29,7 @@ This at the top of the file, here
 -`basis_tag` is the name that the cluster has that you want to open  
 -`irr_flag` is the flag of the irreducible transformation you applied to the cluster. If you did not specify one leave it blank  
 -`eim` is a broadening parameter, it should match the one specified in `BRIANNA` in `out`. Sometimes when the states are very close you can also make it slightly larger.  
--`cubic` should be set to True if you used basisset 3 and false if it is set to 3. (This was implemented so one can use Id flags in RSPt)  
+-`cubic` should be set to True if you used basisset 3 and false if it is set to 0. (This was implemented so one can use Id flags in RSPt)  
 -`verbose_fig` if set to True it will print an overview of all spectra, if set to False it will skip to your fits instead  
 -`verbose_text` if set to True it will print information such as the hopping matrix in the terminal  
 -`xlim` sets your plotting range, it is limited by the energywindow and the energymesh set in RSPt as all elements outside of them should be 0. But usually the interesting peaks are closer to the Fermi energy.
