@@ -43,7 +43,7 @@ Now, let us go through every part that is set here.
 -`doccs` (float): Occupation of the said Orbital for double counting (Nominal works well, but sometimes it is worth trying the occupation RSPt gives you).  
 -`nBath3d` (integer): Total number of bath states for the Orbitals you want to excite into. finiteH0.py prints it at the end of the run.  
 -`nBath3dval` (integer): Number of valence bath states for the Orbitals you want to excite into.  
--`ct` (float): Double counting correction, physically corresponds to  
+-`ct` (float): Double counting correction of the bath states, physically corresponds to the energy difference between the ligands and the impurity.
 -`delta` (float): lorentizian broadening of the entire spectrum due to lifetime effects  
 -`delta_2` (float): additional broadening of the $L_2$-edge due to the super Coster-Kronig effect.  
 -`POS` (float): Energy after which the extra broadening is applied aim to have it in a region were the intensity between the $L_3$ and $L_2$ edge is zero or at least small.  
