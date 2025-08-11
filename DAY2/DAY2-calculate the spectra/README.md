@@ -49,9 +49,9 @@ Now, let us go through every part that is set here.
 -`POS` (float): Energy after which the extra broadening is applied aim to have it in a region were the intensity between the $L_3$ and $L_2$ edge is zero or at least small.  
 -`deltaRIXS`(float): broadening for the energyloss part in RIXS, negative values make the program skip the calculation of the RIXS spectrum.   
 -`deltaNIXS`(float): broadening for the energyloss part in NIXS, negative values make the program skip the calculation of the NIXS spectrum.   
--`Fdd` (tuple): $`F_{dd}^k$` Slater parameters from RSPt in order of $k$. Note that $`F_{dd}^k`$ is 0 when k is odd.  
-`Fpd` (tuple): $`F_{pd}^k$` Slater parameters from RSPt in order of $k$. Note that $`F_{pd}^k`$ is 0 when k is odd.   
--`Gdd` (tuple): $`G_{pd}^k$` Slater parameters from RSPt in order of $k$. Note that $`G_{pd}^k`$ is 0 when k is even.  
+-`Fdd` (tuple): $`F_{dd}^k`$ Slater parameters from RSPt in order of $k$. Note that $`F_{dd}^k`$ is 0 when k is odd.  
+`Fpd` (tuple): $`F_{pd}^k`$ Slater parameters from RSPt in order of $k$. Note that $`F_{pd}^k`$ is 0 when k is odd.   
+-`Gdd` (tuple): $`G_{pd}^k`$ Slater parameters from RSPt in order of $k$. Note that $`G_{pd}^k`$ is 0 when k is even.  
 -`xi_2p` (float): 2 $p$ spin-orbit coupling in eV. You can calculate it from the energy difference of the core states in out. The difference is then multiplied by $`-\frac{2}{3}`$.  
 -`xi_3d` (float): 3 $d$ spin-orbit coupling in eV.  
 -`VP` (float): shift of the 2 $p$ energy level in eV. Only important if you have multiple different sides contributing to the same absorption edges. The energy differences between the core states in RSPt give a good indication of this value.  
