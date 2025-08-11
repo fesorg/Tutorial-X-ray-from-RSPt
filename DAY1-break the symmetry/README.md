@@ -6,7 +6,7 @@ This can cause certain issues in the spectra for example an underprediction of t
 
 
 ## Running a spin averaged DFT calculation
-If you want to run a spin averaged DFT calculation, where you later on introduce the spin using tensormoments, you have to specify `spinpol` in the `symt.inp` file and you cannot specify `up` or `dn` in the `atom` block.
+If you want to run a spin averaged DFT calculation, where you later on introduce the spin using tensormoments, you cannot specify `spinpol` in the `symt.inp` file and you cannot specify `up` or `dn` in the `atom` block.
 Instead use `a` and `b` to preserve the symmetry of the magnetic state.
 ````
 atoms
