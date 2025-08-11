@@ -45,11 +45,7 @@ and the Basis block in the same file from
      1     2     1
      1     2     2
      4     4     3     4     5     6     7     8     9
-    20    21    -1     0     0     0     0     0     0
-     4     4     3     4     5     6     7     8     9
-    20    21    -1     0     0     0     0     0     0
-     3     3     3     4     5     6     7     8     9
-    -1    -1     0     0     0     0     0     0     0
+     0     0    -1     0     0     0     0     0     0
      3     3     3     4     5     6     7     8     9
     -1    -1     0     0     0     0     0     0     0
 ````
@@ -69,13 +65,10 @@ to:
      1     2     1
      1     2     2
      4     4     3     4     5     6     7     8     9
-    20    21    -1     0     0     0     0     0     0
-     4     4     3     4     5     6     7     8     9
-    20    21    -1     0     0     0     0     0     0
+     0     0    -1     0     0     0     0     0     0
      3     2     4     4     5     6     7     8     9
     -1    -1    -1     0     0     0     0     0     0
-     3     2     4     4     5     6     7     8     9
-    -1    -1    -1     0     0     0     0     0     0
+
 ````
 Note that we put the 4$`d`$ electrons into `energy set 2` and added the `-1` flag. This is done so that `energy set` 1 and 2 are orthogonal and the electrons can not move between them, which would give us the wrong interaction.
 After we modified the `data` file we now have to modify the `green.inp` file so that it prints us the Slater-parameters.
